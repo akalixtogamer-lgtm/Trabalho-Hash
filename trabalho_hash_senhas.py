@@ -31,9 +31,9 @@ def criar_banco():
     cursor = conexao.cursor()
 
     cursor.execute("""
-        Criando tabela se ela não existir usuarios (
-            email texto PRIMARY KEY,
-            hash_senha texto NOT NULL
+        Create table if not exists usuarios (
+            email text PRIMARY KEY,
+            hash_senha text NOT NULL
         )
     """)
 
